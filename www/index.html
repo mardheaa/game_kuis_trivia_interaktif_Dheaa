@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kuis Ceria</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+
+    <!-- HALAMAN PEMBUKA -->
+    <section id="start-screen" class="screen welcome-card">
+      <div class="welcome-decor">⭐ ☁️ 🌈</div>
+      <div class="welcome-picture">📚✏️</div>
+      <p class="subtitle">GAME EDUKASI</p>
+      <h1>Yuk, Main Kuis! 🎉</h1>
+      <p class="description">
+        Hai, teman pintar! Ayo jawab pertanyaan
+        dan kumpulkan poin sebanyak-banyaknya!
+      </p>
+      <div class="welcome-info">
+        <span>📝 15 Soal</span>
+        <span>⏰ 20 Detik/Soal</span>
+        <span>⭐ 10 Poin</span>
+      </div>
+      <button id="start-btn" class="primary-btn">
+        Mulai Kuis 🚀
+      </button>
+    </section>
+
+    <!-- HALAMAN KUIS -->
+    <section id="quiz-screen" class="screen quiz-card" hidden>
+      <div class="quiz-info">
+        <span id="question-number">Soal 1 dari 15</span> <!-- question-number menampilkan nomor soal -->
+        <span id="score">Skor: 0</span> <!-- score untuk menampilkan skor sementara -->
+      </div>
+
+      <div class="timer-section">
+        <div class="timer-label">
+          <span>⏰ Waktu tersisa</span>
+          <span id="timer">20 detik</span>
+        </div>
+        <div class="timer-bar"> 
+          <div id="timer-progress"></div> <!-- menunjukkan sisa waktu melalui garis progres -->
+        </div>
+      </div>
+
+      <div id="question-picture" class="question-picture">🐱</div> <!-- tempat gambar soal -->
+      <h2 id="question">Pertanyaan akan muncul di sini.</h2>
+
+      <div id="answer-buttons" class="answer-buttons"></div> <!-- tempat pilihan jawaban -->
+
+      <p id="feedback" aria-live="polite"></p> <!-- menampilkan pemberitahuan jawaban benar atau salah -->
+
+      <button id="next-btn" class="primary-btn" hidden>
+        Soal Berikutnya ➜
+      </button>
+    </section>
+
+    <!-- HALAMAN HASIL -->
+    <section id="result-screen" class="screen result-card" hidden>
+      <div class="result-confetti">🎉 ⭐ 🎊</div>
+      <div id="result-emoji" class="result-emoji">🏆</div>
+      <h1 id="result-title">Kuis Selesai!</h1>
+      <p id="result-message">
+        Yeay, kamu sudah menyelesaikan kuis!
+      </p>
+
+      <div class="final-score">
+        <span>Skor Akhir</span>
+        <strong id="final-score">0</strong>
+        <span id="score-total">dari 150 poin</span>
+      </div>
+
+      <div id="result-stars" class="result-stars">⭐⭐⭐</div>
+      <p id="result-predicate" class="result-predicate">Hebat!</p>
+
+      <button id="restart-btn" class="primary-btn">
+        Main Lagi
+      </button>
+    </section>
+
+    <footer>
+      <p>Belajar sambil bermain ✨</p>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
